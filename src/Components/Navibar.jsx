@@ -7,7 +7,7 @@ const Styles = styled.div `
       a, .navbar-brand, .navbar-nav, nav-link {
       color: #adb1b8;
       &:hover {
-      color: white
+      color: white;
       }
       }
 `
@@ -50,15 +50,15 @@ export default function NaviBar() {
         <Form>
           <Form.Group controlId='fromBasicEmail'>
               <Form.Label>Почта</Form.Label>
-              <Form.control type='Ваша почта' placeholder='Введите почту'/>
-              <Form.text className='text-muted'>1111</Form.text>
+              <Form.Control type='Ваша почта' placeholder='Введите почту'/>
+              <Form.Text className='text-muted'></Form.Text>
           </Form.Group>
           <Form.Group controlId='fromBasicPassword'>
               <Form.Label>Пароль</Form.Label>
-              <Form.control type='Ваш пароль' placeholder='Введите пароль'/>
+              <Form.Control type='Ваш пароль' placeholder='Введите пароль'/>
           </Form.Group>
           <Form.Group controlId='fromBasicCheckbox'>
-              <Form.check type='checkbox' label='r'/>
+              <Form.Check type='checkbox' label='Запомнить устройство'/>
           </Form.Group>
         </Form>
       </Modal.Body>
