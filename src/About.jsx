@@ -1,42 +1,20 @@
-import React, { Component } from 'react'
-import { Table } from 'react-bootstrap';
-import deserts1 from './deserts1.jpg';
-import dreenk from './dreenk.jpg';
-import hot from './hot.jpg';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
- export const About = () => {
-    const about = [
-        { id: 1, name: 'Товар 1', price: 100, quantity: 10 },
-        { id: 2, name: 'Товар 2', price: 150, quantity: 5 },
-        { id: 3, name: 'Товар 3', price: 200, quantity: 8 },
-        { id: 4, name: 'Товар 4', price: 250, quantity: 2 },
-    ];
-
-    return (
-        <div className="container mt-5">
-            <h2>Список товаров</h2>
-            <Table striped bordered hover>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Название</th>
-                        <th>Цена</th>
-                        <th>Количество</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {about.map((about) => (
-                        <tr key={about.id}>
-                            <td>{about.id}</td>
-                            <td>{about.name}</td>
-                            <td>{about.price} ₽</td>
-                            <td>{about.quantity}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </Table>
-        </div>
-    );
-};
+export function About() {
+  return (
+    <Card style={{ width: '18rem' }}>
+      <Card.Img variant="center" src="holder.js/100px180" />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
+  );
+}
 
 export default About;

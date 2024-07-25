@@ -41,7 +41,7 @@ export default function NaviBar() {
                   <Link to='/about'>О нас</Link>
                 </Nav.Link>
                 <Nav.Link>
-                  <Link to='/users'>Меню</Link>
+                  <Link to='/menu'>Меню</Link>
                 </Nav.Link>
               </Nav>
               <Nav>
