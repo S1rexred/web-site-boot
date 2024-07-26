@@ -31,11 +31,12 @@ const texts = [
 
 export const Menu = () => (
     <>
+    <h1 className='text-center'>Меню</h1>
         <div className="menu-blog">
-            <Row>
+            <Row style={{margin: '2px 2px'}}>
                 {images.map((image, index) => (
-                    <Col key={index}>
-                        <Card>
+                    <Col key={index} xs={11} sm={6} md={6} lg={4}>
+                        <Card style={{width: '18rem'}} className='card'>
                             <Card.Img variant="top" src={image} />
                             <Card.Body>
                                 <Card.Title>{titles[index]}</Card.Title> {/* Используем заголовок из массива */}
