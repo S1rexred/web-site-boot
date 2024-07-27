@@ -11,8 +11,8 @@ export const Home = () =>(
         <Slider/>
         <Container style={{paddingTop: '2rem', paddingBottom: '2rem'}}>
             <Row>
-                <Col>
-                    <Card style={{width: '18rem'}}>
+                <Col xs={12} sm={8} md={6} lg={4}>
+                    <Card style={{width: '16rem'}}>
                         <Card.Img variant='top' src={deserts1} />
                         <Card.Body>
                             <Card.Title>Наши десерты</Card.Title>
@@ -23,8 +23,8 @@ export const Home = () =>(
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col>
-                    <Card style={{width: '18rem'}}>
+                <Col xs={12} sm={8} md={6} lg={4}>
+                    <Card style={{width: '16rem'}}>
                         <Card.Img variant='top' src={hot} />
                         <Card.Body>
                             <Card.Title>Горячие блюда</Card.Title>
@@ -35,8 +35,8 @@ export const Home = () =>(
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col>
-                    <Card style={{width: '18rem'}}>
+                <Col xs={12} sm={8} md={6} lg={4}>
+                    <Card style={{width: '16rem'}}>
                         <Card.Img variant='top' src={dreenk} />
                         <Card.Body>
                             <Card.Title>Напитка</Card.Title>
@@ -48,7 +48,7 @@ export const Home = () =>(
                     </Card>
                 </Col>
             </Row>
-        </Container>
+            </Container>
         <Jumbotron/>
     </>
 )

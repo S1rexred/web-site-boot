@@ -7,15 +7,15 @@ import hot from './hot.jpg';
 import Jumbotron from './Components/Jumbotron';
 
 const images = [
-    'https://via.placeholder.com/100x180?text=Image+1',
-    'https://via.placeholder.com/100x180?text=Image+2',
+    "http://tamasi.ru/d/lapsha_s_ovoshchami.jpg",
+    'https://i.pinimg.com/originals/63/12/20/631220700a0db53107c5d5f29b3a734d.jpg',
     'https://via.placeholder.com/100x180?text=Image+3',
     'https://via.placeholder.com/100x180?text=Image+4',
 ];
 
 
 const titles = [
-    'Заголовок карточки 1',
+    'Антипасто',
     'Заголовок карточки 2',
     'Заголовок карточки 3',
     'Заголовок карточки 4',
@@ -37,7 +37,7 @@ export const Menu = () => (
                 {images.map((image, index) => (
                     <Col key={index} xs={6} sm={6} md={6} lg={3}>
                         <Card style={{width: '16rem'}} className='card'>
-                            <Card.Img variant="top" src={image} />
+                            <Card.Img style={{ width: "21rem"}} variant="top" src={image} />
                             <Card.Body>
                                 <Card.Title>{titles[index]}</Card.Title> {/* Используем заголовок из массива */}
                                 <Card.Text>
