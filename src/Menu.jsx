@@ -35,8 +35,8 @@ export const Menu = () => (
         <div className="menu-blog">
             <Row style={{margin: '2px 2px'}}>
                 {images.map((image, index) => (
-                    <Col key={index} xs={11} sm={6} md={6} lg={4}>
-                        <Card style={{width: '18rem'}} className='card'>
+                    <Col key={index} xs={6} sm={6} md={6} lg={3}>
+                        <Card style={{width: '16rem'}} className='card'>
                             <Card.Img variant="top" src={image} />
                             <Card.Body>
                                 <Card.Title>{titles[index]}</Card.Title> {/* Используем заголовок из массива */}
