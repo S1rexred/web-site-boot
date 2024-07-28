@@ -7,12 +7,9 @@ import hot from './hot.jpg';
 import Jumbotron from './Components/Jumbotron';
 
 const images = [
-    "http://tamasi.ru/d/lapsha_s_ovoshchami.jpg",
-    'https://i.pinimg.com/originals/63/12/20/631220700a0db53107c5d5f29b3a734d.jpg',
-    'https://via.placeholder.com/100x180?text=Image+3',
-    'https://via.placeholder.com/100x180?text=Image+4',
+    "https://disk.yandex.ru/i/xX3Zk7CssWxktg",
+    ,
 ];
-
 
 const titles = [
     'Антипасто',
@@ -20,7 +17,6 @@ const titles = [
     'Заголовок карточки 3',
     'Заголовок карточки 4',
 ];
-
 
 const texts = [
     'Описание для карточки 1. Это пример текста.',
@@ -31,7 +27,7 @@ const texts = [
 
 export const Menu = () => (
     <>
-    <h1 className='text-center'>Меню</h1>
+    <h1 className='text-center'>Аппетайзеры</h1>
         <div className="menu-blog">
             <Row style={{margin: '2px 2px'}}>
                 {images.map((image, index) => (
