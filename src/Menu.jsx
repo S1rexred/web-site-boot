@@ -53,6 +53,17 @@ const pizzaTexts = [
   'Описание блюда 2',
   'Описание блюда 2',
 ];
+const desertImages = [
+   
+];
+
+const desertTitles = [
+  
+];
+
+const desertTexts = [
+  
+];
 
 export const Menu = () => (
     <>
@@ -60,7 +71,7 @@ export const Menu = () => (
         <div className="menu-blog">
             <Row style={{margin: '2px 2px'}}>
                 {appetizersImages.map((image, index) => (
-                    <Col key={index} xs={12} sm={6} md={4} lg={3}>
+                    <Col key={index} xs={6} sm={6} md={4} lg={3}>
                         <Card className='card'>
                             <Card.Img variant="top" src={image} />
                             <Card.Body>
@@ -80,13 +91,33 @@ export const Menu = () => (
     <div className="menu-blog">
         <Row style={{margin: '2px 2px'}}>
             {pizzaImages.map((image, index) => (
-                <Col key={index} xs={12} sm={6} md={4} lg={3}>
+                <Col key={index} xs={6} sm={6} md={4} lg={3}>
                     <Card className='card'>
                         <Card.Img variant="top" src={image} />
                         <Card.Body>
                             <Card.Title>{pizzaTitles[index]}</Card.Title> 
                             <Card.Text>
                                 {pizzaTexts[index]} 
+                            </Card.Text>
+                            
+                        </Card.Body>
+                    </Card>
+                </Col>
+            ))}
+        </Row>
+    </div>
+    
+    <h1 className='text-center mt-5'>Десерты</h1> 
+    <div className="menu-blog">
+        <Row style={{margin: '2px 2px'}}>
+            {desertImages.map((image, index) => (
+                <Col key={index} xs={12} sm={6} md={4} lg={3}>
+                    <Card className='card'>
+                        <Card.Img variant="top" src={image} />
+                        <Card.Body>
+                            <Card.Title>{desertTitles[index]}</Card.Title> 
+                            <Card.Text>
+                                {desertTexts[index]} 
                             </Card.Text>
                             
                         </Card.Body>

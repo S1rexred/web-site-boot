@@ -12,18 +12,6 @@ code {
     monospace;
 }
 
-@media (max-width: 574px) {
-  .card {
-    width: 10rem;
-    
-     
-  }
-}
-@media (max-width: 767px) {
-  .card {
-    width: 100rem;
-    
-     
-  }
-}
+
+
  
