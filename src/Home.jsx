@@ -5,6 +5,7 @@ import deserts1 from './deserts1.jpg';
 import dreenk from './dreenk.jpg';
 import hot from './hot.jpg';
 import Jumbotron from './Components/Jumbotron';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
 export const Home = () =>(
     <>
@@ -19,7 +20,7 @@ export const Home = () =>(
                             <Card.Text>
                                 Все наши десерты - уникальны! Мы сами можете в этом убедиться
                             </Card.Text>
-                            <Button variant="primary">Меню</Button>
+                            <Button as={Link} to="/menu" variant="primary">Меню</Button>
                         </Card.Body>
                     </Card>
                 </Col>
@@ -31,7 +32,7 @@ export const Home = () =>(
                             <Card.Text>
                                 У нас также огромный выбор горячих блюд, от супов до стейков
                             </Card.Text>
-                            <Button variant="primary">Меню</Button>
+                            <Button as={Link} to="/menu" variant="primary">Меню</Button>
                         </Card.Body>
                     </Card>
                 </Col>
@@ -43,7 +44,7 @@ export const Home = () =>(
                             <Card.Text>
                                 Также нельзя забывать и про напитка, у нас имеется все! От воды до элитного алкоголя!!!
                             </Card.Text>
-                            <Button variant="primary">Меню</Button>
+                            <Button as={Link} to="/menu" variant="primary">Меню</Button>
                         </Card.Body>
                     </Card>
                 </Col>

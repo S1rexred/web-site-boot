@@ -7,10 +7,10 @@ import hot from './hot.jpg';
 import Jumbotron from './Components/Jumbotron';
 
 const appetizersImages = [
-    "https://onedrive.live.com/embed?resid=66971F1843B95B1D%2143550&authkey=%21ANmcpKegI33d6JI&width=1200&height=800",
-    "https://onedrive.live.com/embed?resid=66971F1843B95B1D%2143551&authkey=%21ADESdIutKD5O3ug&width=1936&height=1296",
-    'https://onedrive.live.com/embed?resid=66971F1843B95B1D%2143552&authkey=%21AOLlApDh9TtLMLQ&width=1000&height=666',
-    'https://onedrive.live.com/embed?resid=66971F1843B95B1D%2143549&authkey=%21AOcfIrBzFiFbz6Q&width=900&height=600'
+    "https://onedrive.live.com/embed?resid=66971F1843B95B1D%2143598&authkey=%21AEPT50sjguhurcw&width=1200&height=800",
+    "https://onedrive.live.com/embed?resid=66971F1843B95B1D%2143600&authkey=%21AA4ViWZ6tZtsG4c&width=1936&height=1296",
+    'https://onedrive.live.com/embed?resid=66971F1843B95B1D%2143596&authkey=%21AGPBUtQWnM1nXFI&width=1000&height=666',
+    'https://onedrive.live.com/embed?resid=66971F1843B95B1D%2143592&authkey=%21AG1Hk_IDcNmgq5k&width=900&height=600'
 ];
 
 const appetizersTitles = [
@@ -27,13 +27,20 @@ const appetizersTexts = [
     'Описание для карточки 4. Последний пример текста.',
 ];
 
+const altAppetizersTexts = [
+    'Изображение капонаты',
+    'Изображение антипасто',
+    'Изображение карпачо',
+    'Изображение грисни',
+];
+
 const pizzaImages = [
-  'https://onedrive.live.com/embed?resid=66971F1843B95B1D%2143562&authkey=%21ABc8pGmcVjc2l9E&width=5616&height=3744', 
-  'https://onedrive.live.com/embed?resid=66971F1843B95B1D%2143559&authkey=%21AIdNMClmE2fndHo&width=1200&height=799',
-  'https://onedrive.live.com/embed?resid=66971F1843B95B1D%2143569&authkey=%21AFdmGzZDIuncrzE&width=800&height=533', 
-  'https://onedrive.live.com/embed?resid=66971F1843B95B1D%2143568&authkey=%21AGfLS9ATXv-1M2g&width=1680&height=1115', 
-  'https://onedrive.live.com/embed?resid=66971F1843B95B1D%2143564&authkey=%21AJKENL2AqylbaAw&width=1200&height=800', 
-  'https://onedrive.live.com/embed?resid=66971F1843B95B1D%2143563&authkey=%21AMCqj8IAYcgE53Y&width=1920&height=1282', 
+  'https://onedrive.live.com/embed?resid=66971F1843B95B1D%2143594&authkey=%21AMprDxbxYahntcQ&width=5616&height=3744', 
+  'https://onedrive.live.com/embed?resid=66971F1843B95B1D%2143593&authkey=%21AHUctXyB5spf-T4&width=1200&height=799',
+  'https://onedrive.live.com/embed?resid=66971F1843B95B1D%2143595&authkey=%21AJd8wm21EaqEhMk&width=800&height=533', 
+  'https://onedrive.live.com/embed?resid=66971F1843B95B1D%2143597&authkey=%21ALz9fm97gDorxKc&width=1680&height=1115', 
+  'https://onedrive.live.com/embed?resid=66971F1843B95B1D%2143599&authkey=%21AKkFgYs9KLTkafI&width=1200&height=800', 
+  'https://onedrive.live.com/embed?resid=66971F1843B95B1D%2143591&authkey=%21AAxsRBB2QHcmv9k&width=1920&height=1282', 
 ];
 
 const pizzaTitles = [
@@ -53,6 +60,17 @@ const pizzaTexts = [
   'Описание блюда 2',
   'Описание блюда 2',
 ];
+
+const altPizzaTexts = [
+  'Описание блюда 1',
+  'Описание блюда 2',
+  'Описание блюда 2',
+  'Описание блюда 2',
+  'Описание блюда 2',
+  'Описание блюда 2',
+];
+
+
 const desertImages = [
    
 ];
@@ -65,6 +83,10 @@ const desertTexts = [
   
 ];
 
+const altDesertTexts = [
+  
+];
+
 export const Menu = () => (
     <>
     <h1 className='text-center'>Аппетайзеры</h1>
@@ -73,7 +95,7 @@ export const Menu = () => (
                 {appetizersImages.map((image, index) => (
                     <Col key={index} xs={6} sm={6} md={4} lg={3}>
                         <Card className='card'>
-                            <Card.Img variant="top" src={image} />
+                            <Card.Img variant="top" src={image} alt={altAppetizersTexts[index]} />
                             <Card.Body>
                                 <Card.Title>{appetizersTitles[index]}</Card.Title> 
                                 <Card.Text>
@@ -93,7 +115,7 @@ export const Menu = () => (
             {pizzaImages.map((image, index) => (
                 <Col key={index} xs={6} sm={6} md={4} lg={3}>
                     <Card className='card'>
-                        <Card.Img variant="top" src={image} />
+                        <Card.Img variant="top" src={image} alt={altPizzaTexts[index]} />
                         <Card.Body>
                             <Card.Title>{pizzaTitles[index]}</Card.Title> 
                             <Card.Text>
@@ -113,7 +135,7 @@ export const Menu = () => (
             {desertImages.map((image, index) => (
                 <Col key={index} xs={12} sm={6} md={4} lg={3}>
                     <Card className='card'>
-                        <Card.Img variant="top" src={image} />
+                        <Card.Img variant="top" src={image} alt={altDesertTexts[index]} />
                         <Card.Body>
                             <Card.Title>{desertTitles[index]}</Card.Title> 
                             <Card.Text>
