@@ -12,6 +12,29 @@ code {
     monospace;
 }
 
+@media (max-width: 689px) {
+.jumimage {
+    height: 300px;
+  }
+}
+@media (max-width: 463px) {
+.jumimage {
+    height: 200px;
+  }
+}
+@media (max-width: 517px) {
+  .lead-h1 {
+      font-size: 1rem; /* Размер заголовка при ширине экрана 517px и меньше */
+  }
+}
+
+@media (max-width: 767px) {
+  .card-margin-hot {
+
+      margin-left: 3rem; /* Установите нужный вам отступ */
+  }
+}
+
 
 
  

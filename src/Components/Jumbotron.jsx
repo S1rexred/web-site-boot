@@ -4,6 +4,7 @@ import cafe3 from '../cafe3.jpg';
 import styled from 'styled-components';
 import { Container, Col, Row } from 'react-bootstrap';
 
+
 const Styles = styled.div`
     .jumbo {
         background: url(${cafe1}) no-repeat fixed bottom;
@@ -38,6 +39,12 @@ const Styles = styled.div`
         padding-top: 50px;
     }
 
+    @media (max-width: 517px) {
+    .lead-h1 {
+        font-size: 3rem;
+    }
+}
+
 `;
 
 const Jumbotron = () => (
@@ -48,15 +55,15 @@ const Jumbotron = () => (
             <h1 className=" lead-h1 display-3">О нашем чудесном кофе</h1>
             <p className="lead text-light">Кафе было создана лишь для наших клиентов, чтобы ИМ было комфортно и приятно в нашем замечательном кафе</p>
             </div>
-        </div>
+   </div>
     </Styles>
 
 <Container style={{marginBottom: '30px', marginTop: '30px'}}>
 <Row>
-    <Col md={7}>
-        <img src={cafe3} height={400}/>
+    <Col xs={7} sm={10} md={9} lg={8}>
+        <img className='jumimage' src={cafe3} height={400}/>
     </Col>
-    <Col md={5}>
+    <Col xs={8} sm={8} md={8} lg={4} >
     <h2>Что имеется у нас?</h2>
         <p style={{ wordWrap: 'break-word' }}>
         Уютное заведение, расположенное в центре города, которое предлагает своим посетителям уникальную атмосферу и разнообразное меню. Интерьер сочетает в себе современные элементы и классические детали, создавая теплую и дружелюбную обстановку.
