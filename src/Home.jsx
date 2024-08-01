@@ -13,7 +13,7 @@ export const Home = () =>(
         <Container style={{ paddingTop: '2rem', paddingBottom: '2rem' }}>
     <Row>
         <Col xs={12} sm={5} md={6} lg={4}>
-            <Card style={{ width: '16rem' }}>
+            <Card className='carddeserts' style={{ width: '16rem' }}>
                 <Card.Img variant='top' src={deserts1} />
                 <Card.Body>
                     <Card.Title>Наши десерты</Card.Title>
@@ -38,7 +38,7 @@ export const Home = () =>(
         </Col>
 
                 <Col xs={12} sm={5} md={6} lg={4}>
-                    <Card style={{width: '16rem'}}>
+                    <Card className='carddrenk' style={{width: '16rem'}}>
                         <Card.Img variant='top' src={dreenk} />
                         <Card.Body>
                             <Card.Title>Напитка</Card.Title>

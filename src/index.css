@@ -34,6 +34,14 @@ code {
       margin-left: 3rem; /* Установите нужный вам отступ */
   }
 }
+@media (max-width: 575px) {
+  .card-margin-hot {
+
+      margin-left: 0rem; /* Установите нужный вам отступ */
+  }
+
+}
+
 
 
 
