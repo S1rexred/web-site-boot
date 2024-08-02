@@ -41,6 +41,11 @@ const NaviBar = () => {
     handleCloseSign(); // Закрываем модальное окно
   };
 
+  const [showBron, setShowBron] = useState(false);
+
+  const handleCloseBron = () => setShowBron(false);
+  const handleShowBron = () => setShowBron(true);
+
   return (
     <>
     <Styles>
@@ -146,6 +151,29 @@ const NaviBar = () => {
           </Form>
         </Modal.Body>
       </Modal>
+
+      <Modal show={showBron} onHide={handleCloseBron}>
+      <Modal.Header closeButton>
+      <Modal.Title>Бронирование</Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <Form>
+          <Form.Group controlId='fromBasicEmail'>
+              <Form.Label>Ваше имя</Form.Label>
+              <Form.Control type='Ваше имя' placeholder='Введите имя'/>
+              <Form.Text className='text-muted'>1111</Form.Text>
+          </Form.Group>
+          <Form.Group controlId='fromBasicPassword'>
+              <Form.Label>Ваш телефон</Form.Label>
+              <Form.Control type='Ваш телефон' placeholder='Введите номер телефона'/>
+          </Form.Group>
+          <Form.Group controlId='fromBasicCheckbox'>
+              <Form.Check type='checkbox' label='r'/>
+          </Form.Group>
+        </Form>
+      </Modal.Body>
+    </Modal>
+
     </>
   );
 };
