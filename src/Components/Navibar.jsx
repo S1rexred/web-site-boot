@@ -49,42 +49,45 @@ const NaviBar = () => {
   return (
     <>
     <Styles>
-      <Navbar collapseOnSelect expand='lg' bg='dark' variant='dark'>
-        <Container>
-          <Navbar.Brand>Block WW</Navbar.Brand>
-          <Navbar.Toggle aria-controls='responsive-navbar-nav' />
-          <Navbar.Collapse id='responsive-navbar-nav'>
-            <Nav className='mr-auto'>
-              <Nav.Link>
-                <Link to='/'>Главная</Link>
-              </Nav.Link>
-              <Nav.Link>
-                <Link to='/about'>О нас</Link>
-              </Nav.Link>
-              <Nav.Link>
-                <Link to='/menu'>Меню</Link>
-              </Nav.Link>
-            </Nav>
-            {userEmail ? (
-              <div>
-                <p style={{ color: 'white' }}>{userEmail}</p>
-                <Button variant="secondary" onClick={() => setUserEmail(null)}>
-                  Выйти
-                </Button>
-              </div>
-            ) : (
-              <div>
-                <Button style={{ marginRight: '5px' }} variant="primary" onClick={() => setShow(true)}>
-                  Войти
-                </Button>
-                <Button variant="secondary" onClick={() => setShowSign(true)}>
-                  Регистрация
-                </Button>
-              </div>
-            )}
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+    <Navbar collapseOnSelect expand='lg' bg='dark' variant='dark'>
+  <Container>
+    <Navbar.Brand>Block WW</Navbar.Brand>
+    <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+    <Navbar.Collapse className='responsive-navbar-nav'>
+      <Nav className='me-auto'>
+        <Nav.Link style={{ textDecoration: 'none' }}>
+          <Link to='/'>Главная</Link>
+        </Nav.Link>
+        <Nav.Link style={{ textDecoration: 'none' }}>
+          <Link to='/about'>О нас</Link>
+        </Nav.Link>
+        <Nav.Link style={{ textDecoration: 'none' }}>
+          <Link to='/menu'>Меню</Link>
+        </Nav.Link>
+      </Nav>
+      <div className="bron-button-container">  {/* Новый блок для кнопки бронирования */}
+        <Button onClick={() => handleShowBron(true)} className='button-bron' variant='primary'>Забронировать столик</Button>
+      </div>
+      {userEmail ? (
+        <div>
+          <p style={{ color: 'white' }}>{userEmail}</p>
+          <Button variant="secondary" onClick={() => setUserEmail(null)}>
+            Выйти
+          </Button>
+        </div>
+      ) : (
+        <div className="auth-buttons"> {/* Новый блок для кнопок входа и регистрации */}
+          <Button style={{ marginRight: '5px' }} variant="primary" onClick={() => setShow(true)}>
+            Войти
+          </Button>
+          <Button variant="secondary" onClick={() => setShowSign(true)}>
+            Регистрация
+          </Button>
+        </div>
+      )}
+    </Navbar.Collapse>
+  </Container>
+</Navbar>
       </Styles>
 
       <Modal show={show} onHide={handleClose}>
@@ -154,22 +157,23 @@ const NaviBar = () => {
 
       <Modal show={showBron} onHide={handleCloseBron}>
       <Modal.Header closeButton>
-      <Modal.Title>Бронирование</Modal.Title>
+      <Modal.Title>Бронирование столика</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Form>
           <Form.Group controlId='fromBasicEmail'>
               <Form.Label>Ваше имя</Form.Label>
               <Form.Control type='Ваше имя' placeholder='Введите имя'/>
-              <Form.Text className='text-muted'>1111</Form.Text>
           </Form.Group>
           <Form.Group controlId='fromBasicPassword'>
               <Form.Label>Ваш телефон</Form.Label>
               <Form.Control type='Ваш телефон' placeholder='Введите номер телефона'/>
           </Form.Group>
           <Form.Group controlId='fromBasicCheckbox'>
-              <Form.Check type='checkbox' label='r'/>
           </Form.Group>
+          <Button variant='primary' style={{ marginTop: '8px' }} onClick={handleRegister}>
+              Отправить
+            </Button>
         </Form>
       </Modal.Body>
     </Modal>

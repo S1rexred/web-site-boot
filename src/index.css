@@ -60,6 +60,18 @@ code {
 
 }
 
+.bron-button-container {
+  display: flex;
+  justify-content: center;  /* Центрирует кнопку по горизонтали */
+  margin-right: auto;      /* Отступ справа от кнопки бронирования */
+}
+ 
+.auth-buttons {
+  display: flex;
+  justify-content: flex-end; /* Центрирует кнопки входа и регистрации по горизонтали */
+}
+ 
+
 
 
 
