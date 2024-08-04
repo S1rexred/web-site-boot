@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, Col, Container, Row, Button, Modal } from 'react-bootstrap';
+import { Card, Col, Row, Button, Modal } from 'react-bootstrap';
 
 const pizzaImages = [
     'https://photopole.ru/wp-content/uploads/italianskaia-pitstsa-10.webp', 

@@ -1,13 +1,10 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button } from 'react-bootstrap';
 import NaviBar from './Components/Navibar';
 import Footer from './Components/Footer';
+import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom';
 
-
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-
-import {Home} from './Home';
+import {Home} from './Nav-Bar/Home';
 import {Menu} from './Menu';
 import {About} from './About';
 

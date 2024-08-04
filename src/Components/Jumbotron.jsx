@@ -1,6 +1,6 @@
 import React from 'react';
-import cafe1 from '../cafe1.jpg';
-import cafe3 from '../cafe3.jpg';
+import cafe1 from './images/cafe1.jpg';
+import cafe3 from './images/cafe3.1.webp';
 import styled from 'styled-components';
 import { Container, Col, Row } from 'react-bootstrap';
 
@@ -61,7 +61,7 @@ const Jumbotron = () => (
 <Container style={{marginBottom: '30px', marginTop: '30px'}}>
 <Row>
     <Col xs={7} sm={10} md={9} lg={8}>
-        <img className='jumimage' src={cafe3} height={400}/>
+        <img className='jumimage' src={cafe3} alt='итальянское кафе' height={400}/>
     </Col>
     <Col xs={8} sm={8} md={8} lg={4} >
     <h2>Что имеется у нас?</h2>

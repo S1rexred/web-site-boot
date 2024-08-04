@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, Col, Container, Row, Button, Modal } from 'react-bootstrap';
+import { Card, Col, Row, Button, Modal } from 'react-bootstrap';
 
 const desertsImages = [
     "https://avatars.mds.yandex.net/i?id=65be8287d799c145e27b1075d0327d1e-4469558-images-thumbs&n=13",

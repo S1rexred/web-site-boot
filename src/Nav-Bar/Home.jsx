@@ -1,11 +1,11 @@
 import React from 'react'
-import Slider from './Components/Slider';
-import { Card, Col, Container, Row, Button } from 'react-bootstrap';
-import deserts1 from './deserts1.jpg';
-import dreenk from './dreenk.jpg';
-import hot from './hot.jpg';
-import Jumbotron from './Components/Jumbotron';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import Slider from '../Components/Slider'
+import { Card, Col, Container, Row, Button } from 'react-bootstrap'
+import Jumbotron from '../Components/Jumbotron'
+import { Link } from 'react-router-dom';
+import dreenk from '../Components/images/dreenk.jpg'
+import deserts1 from '../Components/images/deserts1.jpg'
+import hot from '../Components/images/hot.jpg'
 
 export const Home = () =>(
     <>

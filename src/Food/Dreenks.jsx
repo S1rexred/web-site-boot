@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, Col, Container, Row, Button, Modal } from 'react-bootstrap';
+import { Card, Col, Row, Button, Modal } from 'react-bootstrap';
 
 const DreenksImages = [
     "https://wolokom.ru/public/6ltransq71e85.jpg",
