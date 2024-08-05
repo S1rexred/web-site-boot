@@ -73,6 +73,11 @@ code {
  
 
 
+@media (max-width: 796px) {
+  .carousel-item {
+      height: 900px; /* Новая высота для экранов меньше 796px */
+  }
+}
 
 
  
