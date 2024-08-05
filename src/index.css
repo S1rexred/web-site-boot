@@ -71,11 +71,63 @@ code {
   justify-content: flex-end; /* Центрирует кнопки входа и регистрации по горизонтали */
 }
  
-
+.carousel-item {
+  height: 500px; /* Новая высота для экранов меньше 796px */
+}
 
 @media (max-width: 796px) {
   .carousel-item {
-      height: 900px; /* Новая высота для экранов меньше 796px */
+      height: 20rem; /* Новая высота для экранов меньше 796px */
+  }
+}
+
+@media (max-width: 643px) {
+  .carousel-item {
+      height: 18rem; /* Новая высота для экранов меньше 796px */
+  }
+}
+
+@media (max-width: 533px) {
+  .carousel-item {
+      height: 15rem; /* Новая высота для экранов меньше 796px */
+  }
+}
+
+@media (min-width: 320px) and (max-width: 347px) {
+  .carousel-item {
+      height: 10.5rem; /* Новая высота для экранов меньше 796px */
+  }
+}
+
+@media (min-width: 347px) and (max-width: 360px) {
+  .carousel-item {
+      height: 11rem; /* Новая высота для экранов меньше 796px */
+  }
+}
+
+@media (min-width: 361px) and (max-width: 400px) {
+  .carousel-item {
+      height: 11rem; /* Новая высота для экранов меньше 796px */
+  }
+}
+
+@media (min-width: 797px) and (max-width: 1043px) {
+  .carousel-item {
+      height: 22rem;
+  }
+
+  .card-deserts, .card-hot, .card-dreenk {
+    width: 16rem;
+  }
+}
+
+.card-deserts, .card-hot, .card-dreenk {
+  width: 16rem;
+}
+
+@media (max-width: 575px) {
+  .card-deserts, .card-hot, .card-dreenk {
+    width: 10rem;
   }
 }
 

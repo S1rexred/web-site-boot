@@ -8,7 +8,7 @@ import cafe3 from './images/cafe3.jpg';
 export default function NaviBar() {
   return (
     <Carousel>
-        <Carousel.Item className='carousel-item' style={{'height': '500px' }}>
+        <Carousel.Item className='carousel-item' >
             <img
                 className='d-block w-100'
                 src={cafe1}
@@ -18,7 +18,7 @@ export default function NaviBar() {
             
             </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item className='carousel-item' style={{'height': '500px' }}>
+        <Carousel.Item className='carousel-item' >
             <img
                 className='d-block w-100'
                 src={cafe2}
@@ -28,7 +28,7 @@ export default function NaviBar() {
             
             </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item className='carousel-item' style={{'height': '500px' }}>
+        <Carousel.Item className='carousel-item' >
             <img
                 className='d-block w-100'
                 src={cafe3}
