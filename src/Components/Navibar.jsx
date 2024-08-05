@@ -171,7 +171,7 @@ const NaviBar = () => {
           </Form.Group>
           <Form.Group controlId='fromBasicCheckbox'>
           </Form.Group>
-          <Button variant='primary' style={{ marginTop: '8px' }} onClick={handleRegister}>
+          <Button variant='primary' style={{ marginTop: '8px' }} onClick={handleCloseBron}>
               Отправить
             </Button>
         </Form>

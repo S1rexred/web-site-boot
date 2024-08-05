@@ -52,7 +52,7 @@ const Jumbotron = () => (
     <Styles>
         <div className="jumbo">
             <div className="overlay"> 
-            <h1 className=" lead-h1 display-3">О нашем чудесном кофе</h1>
+            <h1 className=" lead-h1 display-3">О нашем чудесном кафе</h1>
             <p className="lead text-light">Кафе было создана лишь для наших клиентов, чтобы ИМ было комфортно и приятно в нашем замечательном кафе</p>
             </div>
    </div>
