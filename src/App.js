@@ -5,8 +5,8 @@ import Footer from './Components/Footer';
 import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom';
 
 import {Home} from './Nav-Bar/Home';
-import {Menu} from './Menu';
-import {About} from './About';
+import {Menu} from './Nav-Bar/Menu';
+import {About} from './Nav-Bar/About';
 
 
 function App() {

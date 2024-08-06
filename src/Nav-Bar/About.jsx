@@ -1,4 +1,4 @@
-import Jumbotron from "./Components/Jumbotron";
+import Jumbotron from "../Components/Jumbotron";
 
 export function About() {
     return (

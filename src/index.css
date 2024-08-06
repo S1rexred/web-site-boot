@@ -130,6 +130,11 @@ code {
     width: 10rem;
   }
 }
+@media (max-width: 343px) {
+  .card-deserts, .card-hot, .card-dreenk {
+    width: 9rem;
+  }
+}
 
 
  

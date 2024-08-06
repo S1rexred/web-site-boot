@@ -55,16 +55,16 @@ const NaviBar = () => {
     <Navbar.Toggle aria-controls='responsive-navbar-nav' />
     <Navbar.Collapse className='responsive-navbar-nav'>
       <Nav className='me-auto'>
-        <Nav.Link style={{ textDecoration: 'none' }}>
-          <Link to='/'>Главная</Link>
-        </Nav.Link>
-        <Nav.Link style={{ textDecoration: 'none' }}>
-          <Link to='/about'>О нас</Link>
-        </Nav.Link>
-        <Nav.Link style={{ textDecoration: 'none' }}>
-          <Link to='/menu'>Меню</Link>
-        </Nav.Link>
-      </Nav>
+            <Nav.Link as={Link} to='/' style={{ textDecoration: 'none' }}>
+                Главная
+            </Nav.Link>
+            <Nav.Link as={Link} to='/about' style={{ textDecoration: 'none' }}>
+                О нас
+            </Nav.Link>
+            <Nav.Link as={Link} to='/menu' style={{ textDecoration: 'none' }}>
+                Меню
+            </Nav.Link>
+        </Nav>
       <div className="bron-button-container">  {/* Новый блок для кнопки бронирования */}
         <Button onClick={() => handleShowBron(true)} className='button-bron' variant='primary'>Забронировать столик</Button>
       </div>
