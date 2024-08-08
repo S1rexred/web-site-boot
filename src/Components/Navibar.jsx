@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Container, Nav, Navbar, Modal, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import axios from 'axios';
 
 
 const Styles = styled.div`
@@ -18,10 +19,16 @@ const Styles = styled.div`
 
 
 const NaviBar = () => {
+
+
+  
+
   const [show, setShow] = useState(false);
   const [showSign, setShowSign] = useState(false);
+
   const [userEmail, setUserEmail] = useState(null);
   const [loginEmail, setLoginEmail] = useState(''); // Состояние для хранения почты при входе
+
   const [loginPassword, setLoginPassword] = useState(''); // Состояние для хранения пароля при входе
   const [registerEmail, setRegisterEmail] = useState(''); // Состояние для хранения почты при регистрации
   const [registerPassword, setRegisterPassword] = useState(''); // Состояние для хранения пароля при регистрации
@@ -85,11 +92,12 @@ const NaviBar = () => {
           </Button>
         </div>
       )}
+      
     </Navbar.Collapse>
   </Container>
 </Navbar>
       </Styles>
-
+      
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Вход</Modal.Title>
