@@ -7,6 +7,10 @@ import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom';
 import {Home} from './Nav-Bar/Home';
 import {Menu} from './Nav-Bar/Menu';
 import {About} from './Nav-Bar/About';
+import Login from './Components/Login';
+import Logout from './Components/Logout';
+import Register from './Components/Register';
+
 
 
 function App() {
@@ -18,6 +22,9 @@ function App() {
       <Route exact path="/" component={Home} />
       <Route path="/menu" component={Menu} />
       <Route path="/about" component={About} />
+      <Route path="/login" component={Login} />
+      <Route path="/logout" component={Logout} />
+      <Route path="/register" component={Register} />
     </Switch>
     </Router>
     <Footer/>

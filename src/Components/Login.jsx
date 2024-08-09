@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-
+import { Button, Container, Nav, Navbar, Modal, Form } from 'react-bootstrap';
 const Login = () => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
@@ -38,7 +38,7 @@ const Login = () => {
               <Form.Control 
                 type='email' 
                 placeholder='Введите почту' 
-                value={loginEmail}
+                value={username}
                 onChange={(e) => setUsername(e.target.value)} // Обновляем состояние при вводе
               />
             </Form.Group>
@@ -46,11 +46,11 @@ const Login = () => {
               <Form.Label>Пароль</Form.Label>
               <Form.Control type='password' 
                 placeholder='Введите пароль' 
-                value={loginPassword}
+                value={password}
                 onChange={(e) => setPassword(e.target.value)} // Обновляем состояние при вводе
               />
             </Form.Group>
-            <Button variant='primary' style={{ marginTop: '8px' }} onClick={handleLogin}>
+            <Button variant='primary' style={{ marginTop: '8px' }}>
               Войти
             </Button>
           </Form>

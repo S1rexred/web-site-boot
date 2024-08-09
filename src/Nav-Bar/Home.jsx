@@ -41,7 +41,7 @@ export const Home = () =>(
                     <Card className='card-dreenk'>
                         <Card.Img variant='top' src={dreenk} />
                         <Card.Body>
-                            <Card.Title>Напитка</Card.Title>
+                            <Card.Title>Напитки</Card.Title>
                             <Card.Text>
                                 Также нельзя забывать и про напитка, у нас имеется все! От воды до элитного алкоголя!!!
                             </Card.Text>

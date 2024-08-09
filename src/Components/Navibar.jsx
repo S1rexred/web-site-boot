@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Button, Container, Nav, Navbar, Modal, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import axios from 'axios';
-
 
 const Styles = styled.div`
   a,
@@ -17,11 +15,14 @@ const Styles = styled.div`
   }
 `;
 
-
 const NaviBar = () => {
-
-
   
+  const[isAuth, setIsAuth] = useState(false)
+  useEffect(() => {
+    if (localStorage.getItem('access_token')!==null){
+      setIsAuth(true)
+    }
+  },[isAuth])
 
   const [show, setShow] = useState(false);
   const [showSign, setShowSign] = useState(false);
@@ -75,23 +76,19 @@ const NaviBar = () => {
       <div className="bron-button-container">  {/* Новый блок для кнопки бронирования */}
         <Button onClick={() => handleShowBron(true)} className='button-bron' variant='primary'>Забронировать столик</Button>
       </div>
-      {userEmail ? (
-        <div>
-          <p style={{ color: 'white' }}>{userEmail}</p>
-          <Button variant="secondary" onClick={() => setUserEmail(null)}>
+          {isAuth ? <Link to='/logout'>
             Выйти
-          </Button>
-        </div>
-      ) : (
-        <div className="auth-buttons"> {/* Новый блок для кнопок входа и регистрации */}
-          <Button style={{ marginRight: '5px' }} variant="primary" onClick={() => setShow(true)}>
+          </Link> :
+
+          <Link to="/login" style={{ marginRight: '5px' }}>
             Войти
-          </Button>
-          <Button variant="secondary" onClick={() => setShowSign(true)}>
+          </Link>}
+          {isAuth ? '.' : 
+          <Link to="/register" >
             Регистрация
-          </Button>
-        </div>
-      )}
+          </Link>}
+
+
       
     </Navbar.Collapse>
   </Container>
