@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import axios from 'axios'
-import { Button, Container, Nav, Navbar, Modal, Form } from 'react-bootstrap';
-const Registr = () => {
+import { Button, Modal, Form } from 'react-bootstrap';
+const Register = () => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const submit = async e => {
@@ -24,11 +23,11 @@ const Registr = () => {
         return (
             <>
         <Modal>
-        <Modal.Header closeButton>
+        <Modal.Header>
           <Modal.Title>Вход</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form>
+          <Form onSubmit={submit}>
             <Form.Group controlId='formBasicEmail'>
               <Form.Label>Почта</Form.Label>
               <Form.Control 
@@ -58,4 +57,4 @@ const Registr = () => {
 }
 }
 
-export default Registr
+export default Register

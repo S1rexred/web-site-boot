@@ -32,7 +32,7 @@ const Login = () => {
           <Modal.Title>Вход</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form>
+          <Form onSubmit={submit}>
             <Form.Group controlId='formBasicEmail'>
               <Form.Label>Почта</Form.Label>
               <Form.Control 
