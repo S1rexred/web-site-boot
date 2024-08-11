@@ -2,34 +2,50 @@ import React,{useState} from 'react'
 import { Col, Button, Row, Container, Card, Form } from 'react-bootstrap'
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import axios from 'axios';
 const Register = () => {
-  const [username,setUsername] = useState('');
-  const [password,setPassword] = useState('');
-  const [email,setEmail] = useState('');
 
   const history = useHistory();
 
   const handleRedirect = () => {
     history.push('/');
+
+  }
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
+
+
+  const registerUser = async (email, username, password) => {
+    try {
+      const response = await axios.post('http://localhost:8000/register/', {
+        email,
+        username,
+        password,
+      });
+      console.log('Регистрация успешна:', response.data);
+      // Здесь можно сохранить токен или другую информацию о пользователе, если это необходимо
+      // localStorage.setItem('token', response.data.token); // Пример сохранения токена
+      return response.data; // Возвратите данные для дальнейшего использования
+    } catch (error) {
+      console.error('Ошибка при регистрации:', error.response.data);
+      throw error; // Можно пробросить ошибку для обработки в компоненте
+    }
   };
 
-  const submit = async e =>{
-    e.preventDefault()
+  const submit = async (e) => {
+    e.preventDefault();
+    try {
+      await registerUser(email, username, password);
+      history.push('/login'); // Перенаправление на страницу логина после успешной регистрации
+    } catch (error) {
+      // Здесь можно обработать ошибку и отобразить сообщение пользователю
+      alert('Ошибка при регистрации. Пожалуйста, попробуйте еще раз.');
+    }
 
-    await fetch('http://localhost:8000/register/',{
-      method:'POST',
-      headers:{'Content-Type':"application/json"},
-      body: JSON.stringify(
-        {
-          email,
-          username,
-          password
-        }
-      )
-    });
-    window.location.href='/login'
-  
-  }
+}
+
+
 
   return (
     
