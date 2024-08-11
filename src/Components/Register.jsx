@@ -1,10 +1,18 @@
 import React,{useState} from 'react'
 import { Col, Button, Row, Container, Card, Form } from 'react-bootstrap'
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 const Register = () => {
   const [username,setUsername] = useState('');
   const [password,setPassword] = useState('');
   const [email,setEmail] = useState('');
+
+  const history = useHistory();
+
+  const handleRedirect = () => {
+    history.push('/');
+  };
+
   const submit = async e =>{
     e.preventDefault()
 
@@ -70,7 +78,7 @@ const Register = () => {
                     </p>
                   </div>
                   <div className="d-grid">
-                    <Button variant="primary" type="submit"> 
+                    <Button onClick={handleRedirect} variant="primary" type="submit"> 
                       Зарегистрироваться
                     </Button>
                   </div>

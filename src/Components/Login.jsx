@@ -2,9 +2,16 @@ import React,{useState} from 'react'
 import axios from 'axios'
 import { Col, Button, Row, Container, Card, Form } from 'react-bootstrap'
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 const Login = () => {
   const [email,setEmail] = useState('');
   const [password,setPassword] = useState('');
+
+  const history = useHistory();
+
+  const handleRedirect = () => {
+    history.push('/'); // Укажите нужный путь
+  };
 
 // Create the submit method.
   const submit = async e =>{
@@ -70,7 +77,7 @@ const { data } = await axios.post('http://localhost:8000/token/', user, config);
                     </p>
                   </div>
                   <div className="d-grid">
-                    <Button variant="primary" type="submit">
+                    <Button onClick={handleRedirect} variant="primary" type="submit">
                       Войти
                     </Button>
                   </div>
