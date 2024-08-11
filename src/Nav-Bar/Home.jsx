@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import Slider from '../Components/Slider'
 import { Card, Col, Container, Row, Button } from 'react-bootstrap'
 import Jumbotron from '../Components/Jumbotron'
@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 import dreenk from '../Components/images/dreenk.jpg'
 import deserts1 from '../Components/images/deserts1.jpg'
 import hot from '../Components/images/hot.jpg'
-import axios from 'axios';
 
 
 export const Home = () => {

@@ -27,7 +27,7 @@ const NaviBar = () => {
   const [show, setShow] = useState(false);
   const [showSign, setShowSign] = useState(false);
 
-  const [userEmail, setUserEmail] = useState(null);
+  const [, setUserEmail] = useState(null);
   const [loginEmail, setLoginEmail] = useState(''); // Состояние для хранения почты при входе
 
   const [loginPassword, setLoginPassword] = useState(''); // Состояние для хранения пароля при входе
@@ -76,17 +76,14 @@ const NaviBar = () => {
       <div className="bron-button-container">  {/* Новый блок для кнопки бронирования */}
         <Button onClick={() => handleShowBron(true)} className='button-bron' variant='primary'>Забронировать столик</Button>
       </div>
-          {isAuth ? <Link to='/logout'>
-            Выйти
-          </Link> :
-
-          <Link to="/login" style={{ marginRight: '5px' }}>
-            Войти
-          </Link>}
-          {isAuth ? '.' : 
-          <Link to="/register" >
-            Регистрация
-          </Link>}
+      {isAuth ? <Link to="/logout" className='nav-link active'>Выйти</Link> :
+                  
+                  
+                  <Link to="/login" className='nav-link active' style={{ marginRight: '8px' }}>Войти</Link>}
+        {isAuth ? '.' :
+                  
+                  
+                  <Link to="/register" className='nav-link active'>Регистрация</Link>}
 
 
       
