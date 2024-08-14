@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Button, Container, Nav, Navbar, Modal, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-
+import username from './Register'
 const Styles = styled.div`
   a,
   .navbar-brand,
@@ -54,6 +54,8 @@ const NaviBar = () => {
   const handleCloseBron = () => setShowBron(false);
   const handleShowBron = () => setShowBron(true);
 
+
+
   return (
     <>
     <Styles>
@@ -63,30 +65,30 @@ const NaviBar = () => {
     <Navbar.Toggle aria-controls='responsive-navbar-nav' />
     <Navbar.Collapse className='responsive-navbar-nav'>
       <Nav className='me-auto'>
-            <Nav.Link as={Link} to='/' style={{ textDecoration: 'none' }}>
-                Главная
-            </Nav.Link>
-            <Nav.Link as={Link} to='/about' style={{ textDecoration: 'none' }}>
-                О нас
-            </Nav.Link>
-            <Nav.Link as={Link} to='/menu' style={{ textDecoration: 'none' }}>
-                Меню
-            </Nav.Link>
-        </Nav>
-      <div className="bron-button-container">  {/* Новый блок для кнопки бронирования */}
+        <Nav.Link as={Link} to='/' style={{ textDecoration: 'none' }}>
+          Главная
+        </Nav.Link>
+        <Nav.Link as={Link} to='/about' style={{ textDecoration: 'none' }}>
+          О нас
+        </Nav.Link>
+        <Nav.Link as={Link} to='/menu' style={{ textDecoration: 'none' }}>
+          Меню
+        </Nav.Link>
+      </Nav>
+      <div className="bron-button-container">
         <Button onClick={() => handleShowBron(true)} className='button-bron' variant='primary'>Забронировать столик</Button>
       </div>
-      {isAuth ? <Link to="/logout" className='nav-link active'>Выйти</Link> :
-                  
-                  
-                  <Link to="/login" className='nav-link active' style={{ marginRight: '8px' }}>Войти</Link>}
-        {isAuth ? '.' :
-                  
-                  
-                  <Link to="/register" className='nav-link active'>Регистрация</Link>}
-
-
-      
+      {isAuth ? (
+        <>
+          <span className='nav-link active'>Привет, {username}!</span>
+          <Link to="/logout" className='nav-link active'>Выйти</Link>
+        </>
+      ) : (
+        <>
+          <Link to="/login" className='nav-link active' style={{ marginRight: '8px' }}>Войти</Link>
+          <Link to="/register" className='nav-link active'>Регистрация</Link>
+        </>
+      )}
     </Navbar.Collapse>
   </Container>
 </Navbar>

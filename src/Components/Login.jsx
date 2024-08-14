@@ -10,33 +10,38 @@ const Login = () => {
   const history = useHistory();
 
   const handleRedirect = () => {
-    history.push('/'); // Укажите нужный путь
+    history.push('/');
   };
 
 // Create the submit method.
-  const submit = async e =>{
-    e.preventDefault()
+const submit = async e => {
+  e.preventDefault();
 
-    const user = {
-      email:email,
-      password:password
-    };
-// Create the POST requuest
-const config = {
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  withCredentials: true
-};
+  const user = {
+    email: email,
+    password: password,
+  };
 
-const { data } = await axios.post('http://localhost:8000/token/', user, config);
-  localStorage.clear();
-  console.log(data.access)
-  localStorage.setItem('access_token',data.access);
-  localStorage.setItem('refresh_token',data.refresh);
-  axios.defaults.headers.common['Authorization'] = `Bearer ${data['access']}`;
-  window.location.href = '/'
+  const config = {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    withCredentials: true,
+  };
+
+  try {
+    const { data } = await axios.post('http://localhost:3000/token/', user, config);
+    localStorage.clear();
+    console.log(data.access);
+    localStorage.setItem('access_token', data.access);
+    localStorage.setItem('refresh_token', data.refresh);
+    axios.defaults.headers.common['Authorization'] = `Bearer ${data.access}`;
+    window.location.href = '/';
+  } catch (error) {
+    console.error('Ошибка при входе:', error);
+    // Здесь можно добавить логику для отображения ошибки пользователю
   }
+};
 
   return (
     <Container>
@@ -77,7 +82,7 @@ const { data } = await axios.post('http://localhost:8000/token/', user, config);
                     </p>
                   </div>
                   <div className="d-grid">
-                    <Button onClick={handleRedirect} variant="primary" type="submit">
+                    <Button variant="primary" type="submit">
                       Войти
                     </Button>
                   </div>
