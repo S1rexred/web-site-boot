@@ -1,5 +1,5 @@
 # accounts/serializers.py
-
+from django.contrib.auth import authenticate
 from rest_framework import serializers
 from django.contrib.auth import get_user_model
 
@@ -20,4 +20,18 @@ class RegisterSerializer(serializers.ModelSerializer):
         user = User(**validated_data)
         user.set_password(validated_data['password'])
         user.save()
+        return user
+
+
+    from django.contrib.auth import authenticate
+from rest_framework import serializers
+
+class AuthSerializer(serializers.Serializer): 
+    email = serializers.EmailField()  # Изменил на EmailField для валидации email
+    password = serializers.CharField(write_only=True)  # Убедитесь, что пароль не выводится в ответах
+
+    def validate(self, attrs): 
+        user = authenticate(**attrs) 
+        if user is None: 
+            raise serializers.ValidationError({'non_field_errors': ['Invalid credentials']}) 
         return user

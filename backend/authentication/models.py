@@ -45,3 +45,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return self.username
+    
+class CustomUser(AbstractBaseUser):
+    # Добавьте дополнительные поля здесь
+    bio = models.TextField(blank=True, null=True)

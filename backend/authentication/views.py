@@ -4,8 +4,10 @@ from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated 
 from rest_framework_simplejwt.tokens import RefreshToken 
 from rest_framework import status 
-from .serializers import UserSerializer 
+from .serializers import UserSerializer, AuthSerializer
 from django.views.generic import TemplateView 
+from rest_framework import permissions, generics
+from rest_framework.authtoken.models import Token
 
 # Create your views here. 
 
@@ -40,3 +42,14 @@ class RegisterView(APIView):
 
 class HomePageView(TemplateView): 
     template_name = 'index.html'  # Убедитесь, что файл index.html существует в вашем шаблоне
+
+class LoginView(generics.GenericAPIView):
+    serializer_class = AuthSerializer
+    permission_classes = [permissions.AllowAny]
+
+    def post(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        user = serializer.validated_data
+        token, created = Token.objects.get_or_create(user=user)
+        return Response({'token': token.key})
