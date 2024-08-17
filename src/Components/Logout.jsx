@@ -1,8 +1,6 @@
-import {useEffect} from 'react'
+import React, {useEffect} from 'react'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom';
 const Logout = () => {
-  const navigate = useNavigate(); // Получение функции navigate
   useEffect(()=> {
 
       (async () => {
@@ -18,12 +16,20 @@ const Logout = () => {
           },config);
           localStorage.clear();
           axios.defaults.headers.common['Authorization'] = null;
-          navigate('/')
+          window.location.href = '/login'
         }catch(e){
           console.log('logout not work',e)
         }
       })();
   },[]);
+  return (
+	<div></div>
+  )
 }
 
 export default Logout
+ 
+
+ 
+
+   
