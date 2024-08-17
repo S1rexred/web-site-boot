@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Container, Nav, Navbar, Modal, Form } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar, } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import username from './Register'
