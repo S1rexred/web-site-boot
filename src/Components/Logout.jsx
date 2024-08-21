@@ -1,4 +1,4 @@
-import {useEffect,useState} from 'react'
+import React, {useEffect} from 'react'
 import axios from 'axios'
 const Logout = () => {
   useEffect(()=> {
@@ -28,3 +28,8 @@ const Logout = () => {
 }
 
 export default Logout
+ 
+
+ 
+
+   
