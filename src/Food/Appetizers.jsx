@@ -29,6 +29,13 @@ const altAppetizersTexts = [
     'Изображение грисни',
 ];
 
+const priceAppetizers = [
+    '820',
+    '430',
+    '610',
+    '450'
+]
+
 export const Appetizers = () => {
     const [showModal, setShowModal] = useState(false);
     const [currentDish, setCurrentDish] = useState({ title: '', text: '' });
@@ -50,6 +57,7 @@ export const Appetizers = () => {
                             <Card className='card'>
                                 <Card.Img variant="top" src={image} alt={altAppetizersTexts[index]} />
                                 <Card.Body>
+                                    <div className='price'>{priceAppetizers[index]}</div>
                                     <Card.Title>{appetizersTitles[index]}</Card.Title>
                                     {/* Убрали Card.Text для отображения текста под картинкой */}
                                     {/* Добавляем элемент для отображения "описания" */}

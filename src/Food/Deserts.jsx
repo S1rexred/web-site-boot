@@ -29,6 +29,13 @@ const altdesertsTexts = [
     'Дзукотто',
 ];
 
+const pricedeserts = [
+    '320',
+    '230',
+    '410',
+    '350'
+]
+
 export const Deserts = () => {
     const [showModal, setShowModal] = useState(false);
     const [currentDish, setCurrentDish] = useState({ title: '', text: '' });
@@ -50,6 +57,7 @@ export const Deserts = () => {
                             <Card className='card'>
                                 <Card.Img variant="top" src={image} alt={altdesertsTexts[index]} />
                                 <Card.Body>
+                                <div className='price'>{pricedeserts[index]}</div>
                                     <Card.Title>{desertsTitles[index]}</Card.Title>
                                     {/* Убрали Card.Text для отображения текста под картинкой */}
                                     {/* Добавляем элемент для отображения "описания" */}

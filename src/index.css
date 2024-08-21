@@ -75,6 +75,13 @@ code {
   height: 500px; /* Новая высота для экранов меньше 796px */
 }
 
+.price {
+  margin-left: 14rem;
+  margin-top: 2rem;
+  position: absolute;
+  font-weight: 900;
+}
+
 @media (max-width: 796px) {
   .carousel-item {
       height: 20rem; /* Новая высота для экранов меньше 796px */

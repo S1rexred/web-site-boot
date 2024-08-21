@@ -8,37 +8,9 @@ import deserts1 from '../Components/images/deserts1.jpg'
 import hot from '../Components/images/hot.jpg'
 
 export const Home = () => {
-    const [message, setMessage] = useState('')
-    useEffect(() => {
-        if(localStorage.getItem('access_token')===null){
-            window.location.href = '/login'
-        }
-        else{
-            (async ()=> {
-                try {
-                    const config = {
-                        headers: {
-                            'Content-Type' : 'application/json'
-                        },
-                        withCredentials: true
-                    };
-                    const {data} = await axios.get (
-                        'http://localhost:8000/home/',
-                        config
-                    );
-                    setMessage(data.message)
-                }
-                catch (e) {
-                    console.log('not auth')
-                }
-            }) ()
-        }
-    },[]) 
+        
     return (
         <>
-        <div className='form-signin mt-5 text-center'>
-        <h3>{message}</h3>
-        </div>
             <Slider />
             <Container style={{ paddingTop: '2rem', paddingBottom: '2rem' }}>
                 <Row>

@@ -37,6 +37,14 @@ const pizzaImages = [
     '4 сезона',
   ];
 
+  const pricePizza = [
+    '820',
+    '930',
+    '780',
+    '950',
+    '840'
+]
+
 export const Pizza = () => {
     const [showModal, setShowModal] = useState(false);
     const [currentDish, setCurrentDish] = useState({ title: '', text: '' });
@@ -59,6 +67,7 @@ export const Pizza = () => {
                     <Card className='card'>
                         <Card.Img variant="top" src={image} alt={altPizzaTexts[index]} />
                         <Card.Body>
+                        <div className='price'>{pricePizza[index]}</div>
                             <Card.Title>{pizzaTitles[index]}</Card.Title> 
                             <div style={{ cursor: 'pointer', color: 'dark', textDecoration: 'underline' }} onClick={() => handleShow(pizzaTitles[index], pizzaTexts[index])}>
                                         Описание

@@ -41,6 +41,14 @@ const altDreenksTexts = [
     'Раф',
 ];
 
+const priceDreenks = [
+    '420',
+    '230',
+    '380',
+    '250',
+    '340'
+]
+
 export const Dreenks = () => {
     const [showModal, setShowModal] = useState(false);
     const [currentDish, setCurrentDish] = useState({ title: '', text: '' });
@@ -62,6 +70,7 @@ export const Dreenks = () => {
                             <Card className='card'>
                                 <Card.Img variant="top" src={image} alt={altDreenksTexts[index]} />
                                 <Card.Body>
+                                <div className='price'>{priceDreenks[index]}</div>
                                     <Card.Title>{DreenksTitles[index]}</Card.Title>
                                     {/* Убрали Card.Text для отображения текста под картинкой */}
                                     {/* Добавляем элемент для отображения "описания" */}
