@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Button, Container, Nav, Navbar, } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import username from './Register'
 import BookingModal from './Booking';
+import {handleLogout} from './Logout'
 
 const Styles = styled.div`
   a,
@@ -25,7 +25,7 @@ const NaviBar = () => {
       setIsAuth(true)
     }
   },[isAuth])
-
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [showBron, setShowBron] = useState(false);
 
   const handleShow = () => setShowBron(true);
@@ -58,16 +58,17 @@ const NaviBar = () => {
       </Button>
       </div>
       {isAuth ? (
-        <>
-          <span className='nav-link active'>Привет, {username}!</span>
-          <Link to="/logout" className='nav-link active'>Выйти</Link>
-        </>
-      ) : (
-        <>
-          <Link to="/login" className='nav-link active' style={{ marginRight: '8px' }}>Войти</Link>
-          <Link to="/register" className='nav-link active'>Регистрация</Link>
-        </>
-      )}
+    <>
+        
+    </>
+) : (
+    <>
+       
+        <Link to="/login" className='nav-link active' style={{ marginRight: '8px' }}>Войти</Link>
+        <Link to="/register" className='nav-link active'>Регистрация</Link>
+    </>
+)}
+ 
     </Navbar.Collapse>
   </Container>
 </Navbar>

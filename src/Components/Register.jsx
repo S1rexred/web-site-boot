@@ -9,26 +9,27 @@ const Register = () => {
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
 
-  const registerUser = async (email, username, password) => {
+  const registerUser = async (e) => {
+    e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8000/register', {
-        email,
-        username,
-        password,
-      });
-      console.log('Регистрация успешна:', response.data);
-      return response.data; 
+        const response = await axios.post('http://localhost:8000/api/accounts/register/', {
+            username,
+            email,
+            password,
+        });
+        setMessage('Registration successful!');
+        setIsAuthenticated(true); // Обновляем состояние аутентификации
     } catch (error) {
-      console.error('Ошибка при регистрации:', error.response ? error.response.data : error.message);
-      throw error; 
+        console.error(error);
+        setMessage('Registration failed');
     }
-  };
+};
 
   const submit = async (e) => {
     e.preventDefault();
     try {
       await registerUser(email, username, password);
-      history.push('/login');
+      history.push('/activate');
     } catch (error) {
       alert('Ошибка при регистрации. Пожалуйста, попробуйте еще раз.');
     }

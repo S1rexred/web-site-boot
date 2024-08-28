@@ -10,6 +10,7 @@ import {About} from './Nav-Bar/About';
 import Login from './Components/Login';
 import Logout from './Components/Logout';
 import Register from './Components/Register';
+import LoadingComponent from './Components/LoadingComponent';
 
 
 
@@ -25,6 +26,7 @@ function App() {
       <Route path="/login" component={Login} />
       <Route path="/logout" component={Logout} />
       <Route path="/register" component={Register} />
+      <Route path="/loading" component={LoadingComponent} />
     </Switch>
     </Router>
     <Footer/>
