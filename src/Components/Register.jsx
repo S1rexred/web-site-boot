@@ -34,7 +34,7 @@ const Register = () => {
                   <h2 className="fw-bold text-uppercase mb-2">Регистрация</h2>
                   <p className="mb-5">Кафе Italy</p>
                   <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label className="text-center">Ваша почта</Form.Label>
+                    <Form.Label className="text-center">Ваша почта ( Только gmail )</Form.Label>
                     <input
                       className="form-control mt-1"
                       placeholder="Почта"

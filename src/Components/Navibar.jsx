@@ -3,6 +3,7 @@ import { Button, Container, Nav, Navbar, } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import BookingModal from './Booking';
+import email from './Login'
 import {handleLogout} from './Logout'
 
 const Styles = styled.div`
@@ -59,7 +60,8 @@ const NaviBar = () => {
       </div>
       {isAuth ? (
     <>
-        
+        <span className='nav-link active'>{email}!</span>
+        <Link to="/logout" className='nav-link active'>Выйти</Link>
     </>
 ) : (
     <>
