@@ -73,7 +73,7 @@ export const Dreenks = () => {
                                 <Card.Img variant="top" src={image} alt={altDreenksTexts[index]} />
                                 <Card.Body>
                                 <div className='price' style={{ marginBottom: 'auto', minHeight: '40px', display: 'flex', alignItems: 'center' }}>
-    {priceDreenks[index]}
+    {priceDreenks[index]}₽
 </div>
                                     <Card.Title>{DreenksTitles[index]}</Card.Title>
                                     {/* Убрали Card.Text для отображения текста под картинкой */}

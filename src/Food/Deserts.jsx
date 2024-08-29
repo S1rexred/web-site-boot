@@ -58,7 +58,7 @@ export const Deserts = () => {
                                 <Card.Img variant="top" src={image} alt={altdesertsTexts[index]} />
                                 <Card.Body>
                                 <div className='price' style={{ marginBottom: 'auto', minHeight: '40px', display: 'flex', alignItems: 'center' }}>
-    {pricedeserts[index]}
+    {pricedeserts[index]}₽
 </div>
                                     <Card.Title>{desertsTitles[index]}</Card.Title>
                                     {/* Убрали Card.Text для отображения текста под картинкой */}

@@ -58,7 +58,7 @@ export const Appetizers = () => {
                                 <Card.Img variant="top" src={image} alt={altAppetizersTexts[index]} />
                                 <Card.Body>
                                 <div className='price' style={{ marginBottom: 'auto', minHeight: '40px', display: 'flex', alignItems: 'center' }}>
-    {priceAppetizers[index]}
+    {priceAppetizers[index]}₽
 </div>
                                     <Card.Title>{appetizersTitles[index]}</Card.Title>
                                     {/* Убрали Card.Text для отображения текста под картинкой */}

@@ -69,7 +69,7 @@ export const Pizza = () => {
                         <Card.Img variant="top" src={image} alt={altPizzaTexts[index]} />
                         <Card.Body>
                         <div className='price' style={{ marginBottom: 'auto', minHeight: '40px', display: 'flex', alignItems: 'center' }}>
-    {pricePizza[index]}
+    {pricePizza[index]}₽
 </div>
                             <Card.Title>{pizzaTitles[index]}</Card.Title> 
                             <div style={{ cursor: 'pointer', color: 'dark', textDecoration: 'underline' }} onClick={() => handleShow(pizzaTitles[index], pizzaTexts[index])}>
