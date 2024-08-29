@@ -9,26 +9,12 @@ const Register = () => {
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
 
-  const registerUser = async (e) => {
-    e.preventDefault();
-    try {
-        const response = await axios.post('http://localhost:8000/api/accounts/register/', {
-            username,
-            email,
-            password,
-        });
-        setMessage('Registration successful!');
-        setIsAuthenticated(true); // Обновляем состояние аутентификации
-    } catch (error) {
-        console.error(error);
-        setMessage('Registration failed');
-    }
-};
+
 
   const submit = async (e) => {
     e.preventDefault();
     try {
-      await registerUser(email, username, password);
+      
       history.push('/activate');
     } catch (error) {
       alert('Ошибка при регистрации. Пожалуйста, попробуйте еще раз.');
@@ -55,8 +41,7 @@ const Register = () => {
                       name='email'
                       type='text'
                       value={email}
-                      required
-                      onChange={e => setEmail(e.target.value)}
+                      
                     />
                   </Form.Group>
                   <Form.Group className="mb-3" controlId="formBasicUsername">
@@ -67,8 +52,8 @@ const Register = () => {
                       name='username'
                       type='text'
                       value={username}
-                      required
-                      onChange={e => setUsername(e.target.value)}
+                      
+                      
                     />
                   </Form.Group>
                   <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -79,8 +64,8 @@ const Register = () => {
                       className="form-control mt-1"
                       placeholder="Пароль"
                       value={password}
-                      required
-                      onChange={e => setPassword(e.target.value)}
+                     
+                      
                     />
                   </Form.Group>
                   <div className="d-grid">

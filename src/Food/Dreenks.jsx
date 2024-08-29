@@ -46,6 +46,8 @@ const priceDreenks = [
     '230',
     '380',
     '250',
+    '340',
+    '250',
     '340'
 ]
 
@@ -70,7 +72,9 @@ export const Dreenks = () => {
                             <Card className='card'>
                                 <Card.Img variant="top" src={image} alt={altDreenksTexts[index]} />
                                 <Card.Body>
-                                <div className='price'>{priceDreenks[index]}</div>
+                                <div className='price' style={{ marginBottom: 'auto', minHeight: '40px', display: 'flex', alignItems: 'center' }}>
+    {priceDreenks[index]}
+</div>
                                     <Card.Title>{DreenksTitles[index]}</Card.Title>
                                     {/* Убрали Card.Text для отображения текста под картинкой */}
                                     {/* Добавляем элемент для отображения "описания" */}

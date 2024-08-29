@@ -42,7 +42,8 @@ const pizzaImages = [
     '930',
     '780',
     '950',
-    '840'
+    '840',
+    '690'
 ]
 
 export const Pizza = () => {
@@ -67,7 +68,9 @@ export const Pizza = () => {
                     <Card className='card'>
                         <Card.Img variant="top" src={image} alt={altPizzaTexts[index]} />
                         <Card.Body>
-                        <div className='price'>{pricePizza[index]}</div>
+                        <div className='price' style={{ marginBottom: 'auto', minHeight: '40px', display: 'flex', alignItems: 'center' }}>
+    {pricePizza[index]}
+</div>
                             <Card.Title>{pizzaTitles[index]}</Card.Title> 
                             <div style={{ cursor: 'pointer', color: 'dark', textDecoration: 'underline' }} onClick={() => handleShow(pizzaTitles[index], pizzaTexts[index])}>
                                         Описание
