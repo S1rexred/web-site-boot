@@ -27,10 +27,7 @@ const NaviBar = () => {
     }
   },[isAuth])
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [showBron, setShowBron] = useState(false);
-
-  const handleShow = () => setShowBron(true);
-  const handleClose = () => setShowBron(false);
+  
 
 
 
@@ -54,9 +51,6 @@ const NaviBar = () => {
         </Nav.Link>
       </Nav>
       <div className="bron-button-container">
-      <Button onClick={handleShow} className='button-bron' variant='primary'>
-        Забронировать столик
-      </Button>
       </div>
       {isAuth ? (
     <>
@@ -76,8 +70,7 @@ const NaviBar = () => {
 </Navbar>
       </Styles>
 
-      <BookingModal showBron={showBron} handleCloseBron={handleClose} />
-
+    
     </>
   );
 };

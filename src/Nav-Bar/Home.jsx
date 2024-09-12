@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import dreenk from '../Components/images/dreenk.jpg'
 import deserts1 from '../Components/images/deserts1.jpg'
 import hot from '../Components/images/hot.jpg'
-
+import Footer from '../Components/Footer';
 export const Home = () => {
         
     return (
@@ -14,7 +14,7 @@ export const Home = () => {
             <Slider />
             <Container style={{ paddingTop: '2rem', paddingBottom: '2rem' }}>
                 <Row>
-                    <Col xs={6} sm={5} md={6} lg={4}>
+                    <Col xs={12} sm={5} md={6} lg={4}>
                         <Card className='card-deserts'>
                             <Card.Img variant='top' src={deserts1} />
                             <Card.Body>
@@ -26,7 +26,7 @@ export const Home = () => {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col xs={6} sm={5} md={6} lg={4} className="card-margin-hot">
+                    <Col xs={12} sm={5} md={6} lg={4} className="card-margin-hot">
                         <Card className='card-hot'>
                             <Card.Img variant='top' src={hot} />
                             <Card.Body>
@@ -39,7 +39,7 @@ export const Home = () => {
                         </Card>
                     </Col>
 
-                    <Col xs={6} sm={5} md={6} lg={4}>
+                    <Col xs={12} sm={5} md={6} lg={4}>
                         <Card className='card-dreenk'>
                             <Card.Img variant='top' src={dreenk} />
                             <Card.Body>
@@ -54,6 +54,7 @@ export const Home = () => {
                 </Row>
             </Container>
             <Jumbotron />
+            <Footer/>
         </>
     );
 };

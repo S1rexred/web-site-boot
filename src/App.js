@@ -29,7 +29,6 @@ function App() {
       <Route path="/loading" component={LoadingComponent} />
     </Switch>
     </Router>
-    <Footer/>
     
     </>
   )
