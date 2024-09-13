@@ -73,7 +73,7 @@ const Register = () => {
                   <Form.Control type="text" placeholder="Введите имя пользователя" value={username} onChange={(e) => setUsername(e.target.value)} />
                 </Form.Group>
                 <Form.Group controlId="formEmail">
-                  <Form.Label>Email</Form.Label>
+                  <Form.Label>Почта (Только gmail)</Form.Label>
                   <Form.Control type="email" placeholder="Введите email" value={email} onChange={(e) => setEmail(e.target.value)} />
                 </Form.Group>
                 <Form.Group controlId="formPassword">
